@@ -18,8 +18,12 @@
 		ED0D611B1F0D5F1500F471C2 /* pruebasqliteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D611A1F0D5F1500F471C2 /* pruebasqliteTests.swift */; };
 		ED0D61261F0D5F1500F471C2 /* pruebasqliteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D61251F0D5F1500F471C2 /* pruebasqliteUITests.swift */; };
 		ED0D613A1F0D695F00F471C2 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED0D61351F0D620A00F471C2 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ED0D613E1F0D6A0800F471C2 /* DatabaseManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D613D1F0D6A0800F471C2 /* DatabaseManagement.swift */; };
-		ED0D61411F0D817400F471C2 /* Baliza.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D61401F0D817400F471C2 /* Baliza.swift */; };
+		EDAF489D1F13C48200B58FA0 /* BalizasDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF489C1F13C48200B58FA0 /* BalizasDBManager.swift */; };
+		EDAF489F1F13C50300B58FA0 /* SQLiteDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF489E1F13C50300B58FA0 /* SQLiteDataStorage.swift */; };
+		EDAF48A11F13EA9400B58FA0 /* GruposMascarasDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF48A01F13EA9400B58FA0 /* GruposMascarasDBManager.swift */; };
+		EDAF48A31F13FD5900B58FA0 /* MotivosDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF48A21F13FD5900B58FA0 /* MotivosDBManager.swift */; };
+		EDAF48A51F14257D00B58FA0 /* MascarasDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF48A41F14257D00B58FA0 /* MascarasDBManager.swift */; };
+		EDAF48A71F142FF000B58FA0 /* GruposDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAF48A61F142FF000B58FA0 /* GruposDBManager.swift */; };
 		FBCA0303C21603D2FB45893D /* Pods_pruebasqliteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F32CE2E99C714CCB1C4DAD /* Pods_pruebasqliteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +83,12 @@
 		ED0D61271F0D5F1500F471C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0D61331F0D600600F471C2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		ED0D61351F0D620A00F471C2 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = "../../Library/Developer/Xcode/DerivedData/pruebasqlite-gojtillkyncsigeipvetcekwdqeu/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework"; sourceTree = "<group>"; };
-		ED0D613D1F0D6A0800F471C2 /* DatabaseManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagement.swift; sourceTree = "<group>"; };
-		ED0D61401F0D817400F471C2 /* Baliza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baliza.swift; sourceTree = "<group>"; };
+		EDAF489C1F13C48200B58FA0 /* BalizasDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalizasDBManager.swift; sourceTree = "<group>"; };
+		EDAF489E1F13C50300B58FA0 /* SQLiteDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDataStorage.swift; sourceTree = "<group>"; };
+		EDAF48A01F13EA9400B58FA0 /* GruposMascarasDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GruposMascarasDBManager.swift; sourceTree = "<group>"; };
+		EDAF48A21F13FD5900B58FA0 /* MotivosDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivosDBManager.swift; sourceTree = "<group>"; };
+		EDAF48A41F14257D00B58FA0 /* MascarasDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascarasDBManager.swift; sourceTree = "<group>"; };
+		EDAF48A61F142FF000B58FA0 /* GruposDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GruposDBManager.swift; sourceTree = "<group>"; };
 		F9F32CE2E99C714CCB1C4DAD /* Pods_pruebasqliteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pruebasqliteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,7 +178,6 @@
 				ED0D610E1F0D5F1500F471C2 /* LaunchScreen.storyboard */,
 				ED0D61111F0D5F1500F471C2 /* Info.plist */,
 				ED0D61091F0D5F1500F471C2 /* pruebasqlite.xcdatamodeld */,
-				ED0D61401F0D817400F471C2 /* Baliza.swift */,
 			);
 			path = pruebasqlite;
 			sourceTree = "<group>";
@@ -196,7 +203,12 @@
 		ED0D613C1F0D69D200F471C2 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				ED0D613D1F0D6A0800F471C2 /* DatabaseManagement.swift */,
+				EDAF489C1F13C48200B58FA0 /* BalizasDBManager.swift */,
+				EDAF48A41F14257D00B58FA0 /* MascarasDBManager.swift */,
+				EDAF48A61F142FF000B58FA0 /* GruposDBManager.swift */,
+				EDAF48A01F13EA9400B58FA0 /* GruposMascarasDBManager.swift */,
+				EDAF489E1F13C50300B58FA0 /* SQLiteDataStorage.swift */,
+				EDAF48A21F13FD5900B58FA0 /* MotivosDBManager.swift */,
 			);
 			name = database;
 			sourceTree = "<group>";
@@ -486,11 +498,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAF48A31F13FD5900B58FA0 /* MotivosDBManager.swift in Sources */,
+				EDAF48A71F142FF000B58FA0 /* GruposDBManager.swift in Sources */,
+				EDAF48A11F13EA9400B58FA0 /* GruposMascarasDBManager.swift in Sources */,
+				EDAF489D1F13C48200B58FA0 /* BalizasDBManager.swift in Sources */,
 				ED0D610B1F0D5F1500F471C2 /* pruebasqlite.xcdatamodeld in Sources */,
 				ED0D61051F0D5F1500F471C2 /* ViewController.swift in Sources */,
-				ED0D61411F0D817400F471C2 /* Baliza.swift in Sources */,
-				ED0D613E1F0D6A0800F471C2 /* DatabaseManagement.swift in Sources */,
 				ED0D61031F0D5F1500F471C2 /* AppDelegate.swift in Sources */,
+				EDAF48A51F14257D00B58FA0 /* MascarasDBManager.swift in Sources */,
+				EDAF489F1F13C50300B58FA0 /* SQLiteDataStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
