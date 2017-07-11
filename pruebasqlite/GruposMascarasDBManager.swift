@@ -3,7 +3,6 @@ import Foundation
 
 import SQLite
 
-import SwiftyJSON
 
 
 
@@ -35,8 +34,8 @@ class GrupoMascaraDBManager {
     static let table = Table(TABLE_NAME)
     
     
-    static let idgrupometodoid = Expression<Int64>("idgrupo")
-    static let mascara = Expression<Int64>("idmascara")
+    static let idgrupo = Expression<Int64>("idgrupo")
+    static let idmascara = Expression<Int64>("idmascara")
     
     
     
@@ -72,8 +71,8 @@ class GrupoMascaraDBManager {
         }
         do {
             let _ = try DB.run( table.create(ifNotExists: true) {table in
-                table.column(idgrupometodoid, primaryKey: true)
-                table.column(mascara)
+                table.column(idgrupo, primaryKey: true)
+                table.column(idmascara)
               
                 print("tabla PivotGrupoMascara creada con exito")            })
             
@@ -88,8 +87,8 @@ class GrupoMascaraDBManager {
             throw DataAccessError.Datastore_Connection_Error
         }
         print("entro en insertar")
-        if (item.idgrupometodoid != nil) {
-            let insert = table.insert(idgrupometodoid <- item.idgrupo!, idmascara <- item.idmascara!)
+        if (item.idgrupo != nil) {
+            let insert = table.insert(idgrupo <- item.idgrupo!, idmascara <- item.idmascara!)
             do {
                 let rowId = try DB.run(insert)
                 guard rowId > 0 else {
@@ -111,8 +110,8 @@ class GrupoMascaraDBManager {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
-        if let id = item.idgrupometodoid {
-            let query = table.filter(idgrupometodoid == id)
+        if let id = item.idgrupo {
+            let query = table.filter(idgrupo == id)
             do {
                 let tmp = try DB.run(query.delete())
                 guard tmp == 1 else {
@@ -131,12 +130,12 @@ class GrupoMascaraDBManager {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
-        let query = table.filter(item.idgrupometodoid! == idgrupometodoid)
+        let query = table.filter(item.idgrupo! == idgrupo)
         let grupos =  try DB.prepare(query)
         
         do {
-            let update = table.update([idgrupometodoid <- item.idgrupometodoid!,
-                                       mascara <- item.mascara!
+            let update = table.update([idgrupo <- item.idgrupo!,
+                                       idmascara <- item.idmascara!
                  ])
             
             do {
@@ -165,7 +164,7 @@ class GrupoMascaraDBManager {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
-        let query = table.filter(id == idgrupometodoid)
+        let query = table.filter(id == idgrupo)
         let grupos =  try DB.prepare(query)
         for grupo in  grupos {
             
@@ -180,7 +179,7 @@ class GrupoMascaraDBManager {
         guard let DB = SQLiteDataStore.sharedInstance.BBDB else {
             throw DataAccessError.Datastore_Connection_Error
         }
-        var retArray = [GM]()
+        var retArray = [PGM]()
         let gms = try DB.prepare(table)
         for gm in gms {
             retArray.append(PivotGrupoMascaraModelo(
