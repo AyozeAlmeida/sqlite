@@ -108,27 +108,22 @@ class ViewController: UIViewController {
         //*********************** PRUEBAS GRUPOS *********************//
         
         do {
-            let itemGrupo = GrupoModelo(idgrupo: 3, nombre: "Grupo 1")
-            let idgrupo = try GruposDBManager.insertar(item: itemGrupo)
+            let itemGrupoPivot = PivotGrupoMascaraModelo(idgrupo: 3, idmascara: 0)
+            let idgrupo = try GrupoMascaraDBManager.insertar(item: itemGrupoPivot)
             print(idgrupo)
         } catch  _{
             print("error al intentar insertar en grupos")
         }
         
-        do {
-            try GruposDBManager.crearTabla()
-        } catch let error {
-            print(error)
-        }
         
         do {
-            let itemGrupo = GrupoModelo(idgrupo: 1, nombre: "Grupo 2")
-            let grupoid = try GruposDBManager.actualizar(item: itemGrupo)
-            print("he actualizado el grupo" )
+            let itemGrupo = PivotGrupoMascaraModelo(idgrupo: 1, idmascara: 6)
+            let grupoid = try GrupoMascaraDBManager.actualizar(item: itemGrupo)
+            print("he actualizado mascara y grupo" )
             print(grupoid)
             
         } catch  _{
-            print("error al intentar actualizar en grupos")
+            print("error al intentar actualizar en mascaraygrupo")
         }
         
         

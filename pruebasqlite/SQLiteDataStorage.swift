@@ -32,6 +32,8 @@ protocol CRUDProtocolo {
     static func ver() throws -> [B]?
 }
 
+
+
 class SQLiteDataStore {
     static let sharedInstance = SQLiteDataStore()
     let BBDB: Connection?
@@ -60,7 +62,7 @@ class SQLiteDataStore {
             try MotivoDBManager.crearTabla()
             try MascarasDBManager.crearTabla()
             try GruposDBManager.crearTabla()
-          
+            try GrupoMascaraDBManager.crearTabla()
             
         } catch {
             throw DataAccessError.Datastore_Connection_Error
